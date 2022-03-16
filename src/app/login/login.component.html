@@ -1,1 +1,13 @@
-<p>login works!</p>
+<div>
+  <h2>{{welcomeMessage}}</h2>
+  <form>
+    User Id: <input [(ngModel)]="userId" name="userId" type="text" placeholder="Enter User ID"/><br>
+    Password: <input [(ngModel)]="password" name="password" type="password"><br>
+    <button class="btn btn-primary" (click)="signIn()">Sign In</button>
+  </form>
+  <p>{{password}}</p>
+  <p *ngIf="password=='admin'" class="text-success">Correct Password</p>
+
+  <p *ngFor="let name of Heroes">{{name.firstname}}</p>
+</div>
+
